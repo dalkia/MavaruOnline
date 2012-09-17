@@ -1,0 +1,10 @@
+K 10
+svn:ignore
+V 58
+Library
+trunk.csproj
+trunk.pidb
+trunk.sln
+trunk.userprefs
+
+END

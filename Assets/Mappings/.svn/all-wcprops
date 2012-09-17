@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/40/trunk/Assets/Mappings
+END
+User.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/40/trunk/Assets/Mappings/User.hbm.xml
+END
+House.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/40/trunk/Assets/Mappings/House.hbm.xml
+END
+User.hbm.xml.meta
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/20/trunk/Assets/Mappings/User.hbm.xml.meta
+END
+House.hbm.xml.meta
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/20/trunk/Assets/Mappings/House.hbm.xml.meta
+END

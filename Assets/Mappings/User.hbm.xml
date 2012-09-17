@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="mavaruonline" namespace="Entidades">
+
+  <class name="User">
+  
+  <id name="Id" column ="IdUser" type="int" unsaved-value="0">
+      <generator class="identity"/>
+    </id>
+
+    <property name="Username" type="string"/>
+    <property name="Password" type="string"/>
+    <property name="Name" type ="string"/>
+    <property name="Lastname" type="string"/>    
+    <property name="Mail" type="string"/>
+    <property name="Description" type="string"/>
+    
+   
+  </class>
+  
+   
+
+</hibernate-mapping>
+

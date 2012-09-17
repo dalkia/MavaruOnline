@@ -1,0 +1,229 @@
+END
+Iesi.Collections.dll.meta
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/20/trunk/Assets/References/Iesi.Collections.dll.meta
+END
+System.Web.dll.meta
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/27/trunk/Assets/References/System.Web.dll.meta
+END
+System.Web.dll
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/27/trunk/Assets/References/System.Web.dll
+END
+MySql.Data.dll
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/20/trunk/Assets/References/MySql.Data.dll
+END
+System.Runtime.Remoting.dll
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/27/trunk/Assets/References/System.Runtime.Remoting.dll
+END
+Iesi.Collections.dll
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/20/trunk/Assets/References/Iesi.Collections.dll
+END
+I18N.dll
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/51/trunk/Assets/References/I18N.dll
+END
+Mono.Web.dll.meta
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/27/trunk/Assets/References/Mono.Web.dll.meta
+END
+System.Data.dll.meta
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/30/trunk/Assets/References/System.Data.dll.meta
+END
+I18N.West.dll
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/51/trunk/Assets/References/I18N.West.dll
+END
+System.Drawing.dll
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/27/trunk/Assets/References/System.Drawing.dll
+END
+System.Security.dll
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/27/trunk/Assets/References/System.Security.dll
+END
+NHibernate.dll.meta
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/20/trunk/Assets/References/NHibernate.dll.meta
+END
+NHibernate.dll
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/20/trunk/Assets/References/NHibernate.dll
+END
+Mono.Data.Sqlite.dll
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/47/trunk/Assets/References/Mono.Data.Sqlite.dll
+END
+Castle.DynamicProxy.dll
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/20/trunk/Assets/References/Castle.DynamicProxy.dll
+END
+I18N.dll.meta
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/51/trunk/Assets/References/I18N.dll.meta
+END
+System.Runtime.Serialization.Formatters.Soap.dll.meta
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/27/trunk/Assets/References/System.Runtime.Serialization.Formatters.Soap.dll.meta
+END
+log4net.dll
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/20/trunk/Assets/References/log4net.dll
+END
+System.Runtime.Remoting.dll.meta
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/27/trunk/Assets/References/System.Runtime.Remoting.dll.meta
+END
+System.Web.Services.dll.meta
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/47/trunk/Assets/References/System.Web.Services.dll.meta
+END
+System.Configuration.dll.meta
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/27/trunk/Assets/References/System.Configuration.dll.meta
+END
+MySql.Data.dll.meta
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/20/trunk/Assets/References/MySql.Data.dll.meta
+END
+System.Web.Services.dll
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/47/trunk/Assets/References/System.Web.Services.dll
+END
+System.Configuration.dll
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/27/trunk/Assets/References/System.Configuration.dll
+END
+log4net.dll.meta
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/20/trunk/Assets/References/log4net.dll.meta
+END
+System.Runtime.Serialization.Formatters.Soap.dll
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/27/trunk/Assets/References/System.Runtime.Serialization.Formatters.Soap.dll
+END
+System.EnterpriseServices.dll
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/27/trunk/Assets/References/System.EnterpriseServices.dll
+END
+Mono.Data.Sqlite.dll.meta
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/47/trunk/Assets/References/Mono.Data.Sqlite.dll.meta
+END
+Castle.DynamicProxy.dll.meta
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/20/trunk/Assets/References/Castle.DynamicProxy.dll.meta
+END
+System.Configuration.Install.dll.meta
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/27/trunk/Assets/References/System.Configuration.Install.dll.meta
+END
+System.Configuration.Install.dll
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/27/trunk/Assets/References/System.Configuration.Install.dll
+END
+System.Security.dll.meta
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/27/trunk/Assets/References/System.Security.dll.meta
+END
+I18N.West.dll.meta
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/51/trunk/Assets/References/I18N.West.dll.meta
+END
+System.Drawing.dll.meta
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/27/trunk/Assets/References/System.Drawing.dll.meta
+END
+Mono.Web.dll
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/27/trunk/Assets/References/Mono.Web.dll
+END
+System.EnterpriseServices.dll.meta
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/27/trunk/Assets/References/System.EnterpriseServices.dll.meta
+END
+System.Data.dll
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/30/trunk/Assets/References/System.Data.dll
+END

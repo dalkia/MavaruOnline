@@ -1,0 +1,293 @@
+fileFormatVersion: 1
+guid: 789930eedf826ae45a21ba60798ff86d
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 0
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 0
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    Female_LeftArm:
+    - 100000
+    - 400000
+    face-2:
+    - 100002
+    - 400002
+    - 13700000
+    eyes:
+    - 100004
+    - 400004
+    - 13700002
+    shoes-2:
+    - 100006
+    - 400006
+    - 13700004
+    top-2:
+    - 100008
+    - 400008
+    - 13700006
+    pants-1:
+    - 100010
+    - 400010
+    - 13700008
+    Female_LeftFoot:
+    - 100012
+    - 400012
+    Female_LeftLeg:
+    - 100014
+    - 400014
+    Female_LeftIndex2:
+    - 100016
+    - 400016
+    Female_Spine1:
+    - 100018
+    - 400018
+    Female_Spine:
+    - 100020
+    - 400020
+    Female_Hips:
+    - 100022
+    - 400022
+    hair-2:
+    - 100024
+    - 400024
+    - 13700010
+    face-1:
+    - 100026
+    - 400026
+    - 13700012
+    hair-1:
+    - 100028
+    - 400028
+    - 13700014
+    pants-2:
+    - 100030
+    - 400030
+    - 13700016
+    Female_LeftHand:
+    - 100032
+    - 400032
+    shoes-1:
+    - 100034
+    - 400034
+    - 13700018
+    Female_LeftThumb2:
+    - 100036
+    - 400036
+    Female_LeftThumb1:
+    - 100038
+    - 400038
+    Female_RightFoot:
+    - 100040
+    - 400040
+    Female_RightToeBase:
+    - 100042
+    - 400042
+    Female_LeftUpLeg:
+    - 100044
+    - 400044
+    Female_LeftToeBase:
+    - 100046
+    - 400046
+    Female_LeftMiddle1:
+    - 100048
+    - 400048
+    Female_LeftMiddle2:
+    - 100050
+    - 400050
+    Female_RightUpLeg:
+    - 100052
+    - 400052
+    //RootNode:
+    - 100054
+    - 400054
+    - 11100000
+    Female_LeftShoulder:
+    - 100056
+    - 400056
+    Female_RightMiddle2:
+    - 100058
+    - 400058
+    Female_RightMiddle1:
+    - 100060
+    - 400060
+    Female_RightIndex2:
+    - 100062
+    - 400062
+    Female_RightIndex1:
+    - 100064
+    - 400064
+    Female_RightThumb2:
+    - 100066
+    - 400066
+    Female_RightThumb1:
+    - 100068
+    - 400068
+    Female_RightHand:
+    - 100070
+    - 400070
+    Female_RightForeArm:
+    - 100072
+    - 400072
+    Female_RightShoulder:
+    - 100074
+    - 400074
+    Female_EyebrowLeft:
+    - 100076
+    - 400076
+    Female_MouthLeft:
+    - 100078
+    - 400078
+    Female_CheekLeft:
+    - 100080
+    - 400080
+    Female_EyebrowRight:
+    - 100082
+    - 400082
+    Female_MouthRight:
+    - 100084
+    - 400084
+    Female_EyelidRight:
+    - 100086
+    - 400086
+    Female_CheekRight:
+    - 100088
+    - 400088
+    Female_EyelidLeft:
+    - 100090
+    - 400090
+    Female_RightLeg:
+    - 100092
+    - 400092
+    Female_LeftForeArm:
+    - 100094
+    - 400094
+    Female_LeftIndex1:
+    - 100096
+    - 400096
+    Female_Jaw:
+    - 100098
+    - 400098
+    Female_EyeRight:
+    - 100100
+    - 400100
+    Female_EyeLeft:
+    - 100102
+    - 400102
+    Female_Head:
+    - 100104
+    - 400104
+    Female_Neck:
+    - 100106
+    - 400106
+    Female_RightArm:
+    - 100108
+    - 400108
+    top-1:
+    - 100110
+    - 400110
+    - 13700020
+    Female_RightMiddle3:
+    - 100112
+    - 400112
+    Female_RightRing1:
+    - 100114
+    - 400114
+    Female_RightRing2:
+    - 100116
+    - 400116
+    Female_RightThumb3:
+    - 100118
+    - 400118
+    Female_RightThumb4:
+    - 100120
+    - 400120
+    Female_LeftRing3:
+    - 100122
+    - 400122
+    Female_LeftPinky2:
+    - 100124
+    - 400124
+    Female_LeftRing2:
+    - 100126
+    - 400126
+    Female_LeftMiddle3:
+    - 100128
+    - 400128
+    Female_LeftPinky1:
+    - 100130
+    - 400130
+    Female_LeftRing1:
+    - 100132
+    - 400132
+    Female_LeftPinky3:
+    - 100134
+    - 400134
+    Female_RightIndex3:
+    - 100138
+    - 400138
+    Female_RightRing3:
+    - 100140
+    - 400140
+    Female_RightPinky1:
+    - 100142
+    - 400142
+    Female_RightPinky2:
+    - 100144
+    - 400144
+    Female_RightPinky3:
+    - 100146
+    - 400146
+    Female_LeftThumb3:
+    - 100148
+    - 400148
+    Female_LeftThumb4:
+    - 100150
+    - 400150
+    Female_LeftIndex3:
+    - 100152
+    - 400152
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: Female_pants1
+    4300002: Female_tshirt
+    4300004: Female_shoes1
+    4300006: Female_sweater
+    4300008: Female_shoes2
+    4300010: Female_face1
+    4300012: Female_hair2
+    4300014: Female_pants2
+    4300016: Female_hair1
+    4300018: Female_face2
+    4300020: Female_eyes2
+    4300022: Female_eyes1
+    4300024: Female_top1
+    4300026: Female_top2
+    4300028: Female_eyes
+    4300030: pants-1
+    4300032: top-1
+    4300034: shoes-1
+    4300036: top-2
+    4300038: shoes-2
+    4300040: face-1
+    4300042: hair-2
+    4300044: pants-2
+    4300046: hair-1
+    4300048: face-2
+    4300050: eyes

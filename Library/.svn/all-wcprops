@@ -1,0 +1,49 @@
+END
+NetworkManager.asset
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/Library/NetworkManager.asset
+END
+TimeManager.asset
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/Library/TimeManager.asset
+END
+QualitySettings.asset
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/75/trunk/Library/QualitySettings.asset
+END
+InputManager.asset
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/Library/InputManager.asset
+END
+AudioManager.asset
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/30/trunk/Library/AudioManager.asset
+END
+DynamicsManager.asset
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/Library/DynamicsManager.asset
+END
+MonoManager.asset
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/30/trunk/Library/MonoManager.asset
+END
+ProjectSettings.asset
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/61/trunk/Library/ProjectSettings.asset
+END

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>9.0.21022</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{3E735423-B1CE-5D4B-A5A7-C2EFB4952551}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_3_4_2;UNITY_3_4;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_OSX;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Database\CreateDatabaseUnity.cs" />
+     <Compile Include="Assets\Network Files\RigidAssign.cs" />
+     <Compile Include="Assets\Properties\AssemblyInfo.cs" />
+     <Compile Include="Assets\Scripts\AllRPCMessages.cs" />
+     <Compile Include="Assets\Scripts\CharacterComponents\CameraToggle.cs" />
+     <Compile Include="Assets\Scripts\CharacterComponents\Character.cs" />
+     <Compile Include="Assets\Scripts\CharacterComponents\CharacterBuilder.cs" />
+     <Compile Include="Assets\Scripts\CharacterComponents\CharacterMovement.cs" />
+     <Compile Include="Assets\Scripts\CharacterComponents\CharacterNetworkManager.cs" />
+     <Compile Include="Assets\Scripts\CharacterComponents\MainCharacter.cs" />
+     <Compile Include="Assets\Scripts\CharacterComponents\MainCharacterMovement.cs" />
+     <Compile Include="Assets\Scripts\CharacterComponents\MovementManager.cs" />
+     <Compile Include="Assets\Scripts\Level Managers\DressingRoomLevel\DressingRoomMain.cs" />
+     <Compile Include="Assets\Scripts\Level Managers\DressingRoomLevel\Glow\GlowEffect.cs" />
+     <Compile Include="Assets\Scripts\Level Managers\DressingRoomLevel\Glow\ImageEffects.cs" />
+     <Compile Include="Assets\Scripts\Level Managers\DressingRoomLevel\MirrorReflection\MirrorReflection.cs" />
+     <Compile Include="Assets\Scripts\Level Managers\InsideHouseManager.cs" />
+     <Compile Include="Assets\Scripts\Level Managers\OutsideWorldManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\CharacterHolder.cs" />
+     <Compile Include="Assets\Scripts\Managers\ConnectedUsers.cs" />
+     <Compile Include="Assets\Scripts\Managers\DatabaseManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\FriendsList.cs" />
+     <Compile Include="Assets\Scripts\Managers\GameStateManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\MavaruOnlineMain.cs" />
+     <Compile Include="Assets\Scripts\Managers\MiniJSON.cs" />
+     <Compile Include="Assets\Scripts\Managers\NetworkManager.cs" />
+     <Compile Include="Assets\Scripts\MouseLook.cs" />
+     <Compile Include="Assets\Scripts\Plugins\Chat.cs" />
+     <Compile Include="Assets\Scripts\Plugins\LabelAboveCharacter.cs" />
+     <Compile Include="Assets\Scripts\Plugins\ObjectLabel.cs" />
+     <Compile Include="Assets\Scripts\UI\MainMenuManager.cs" />
+     <Compile Include="Assets\Scripts\UI\MenuCharacter.cs" />
+     <Compile Include="Assets\Scripts\UI\MessageBoardUI.cs" />
+     <Compile Include="Assets\Scripts\UI\PersonalMessageBoard.cs" />
+     <Compile Include="Assets\Scripts\UI\PublicMessageBoard.cs" />
+     <Compile Include="Assets\Scripts\UI\ReplyMessageBoard.cs" />
+     <Compile Include="Assets\Scripts\UI\Selectors\Board.cs" />
+     <Compile Include="Assets\Scripts\UI\Selectors\CharacterSelector.cs" />
+     <Compile Include="Assets\Scripts\UI\Selectors\HouseSelector.cs" />
+     <Compile Include="Assets\Scripts\UI\Selectors\InsideDoor.cs" />
+     <Compile Include="Assets\Scripts\UI\Selectors\Logout.cs" />
+     <Compile Include="Assets\Scripts\UI\Selectors\Selector.cs" />
+     <Compile Include="Assets\Scripts\UI\WriteMessageMenu.cs" />
+     <Compile Include="Assets\Services\MessageService.cs" />
+     <Compile Include="Assets\Services\UserService.cs" />
+     <Compile Include="Assets\SharpUnit\Assert.cs" />
+     <Compile Include="Assets\SharpUnit\FriendshipDAOTest.cs" />
+     <Compile Include="Assets\SharpUnit\MessageDAOTest.cs" />
+     <Compile Include="Assets\SharpUnit\TestCase.cs" />
+     <Compile Include="Assets\SharpUnit\TestException.cs" />
+     <Compile Include="Assets\SharpUnit\TestReporter.cs" />
+     <Compile Include="Assets\SharpUnit\TestResult.cs" />
+     <Compile Include="Assets\SharpUnit\TestSuite.cs" />
+     <Compile Include="Assets\SharpUnit\UnitTest.cs" />
+     <Compile Include="Assets\SharpUnit\Unity3D_TestReporter.cs" />
+     <Compile Include="Assets\SharpUnit\Unity3D_TestRunner.cs" />
+     <Compile Include="Assets\SharpUnit\UserDAOTest.cs" />
+     <None Include="Assets\_Shaders\Highlight.shader" />
+     <None Include="Assets\Scripts\Level Managers\DressingRoomLevel\Glow\GlowEffectDownsample.shader" />
+     <None Include="Assets\Mappings\User.hbm.xml" />
+     <None Include="Assets\Scripts\Level Managers\DressingRoomLevel\MirrorReflection\MirrorReflection.shader" />
+     <None Include="Assets\Mappings\House.hbm.xml" />
+ <Reference Include="Library\ScriptAssemblies\Assembly-UnityScript-firstpass">
+ <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\References\Castle.DynamicProxy">
+ <HintPath>Assets\References\Castle.DynamicProxy.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\References\I18N.West">
+ <HintPath>Assets\References\I18N.West.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\References\I18N">
+ <HintPath>Assets\References\I18N.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\References\Iesi.Collections">
+ <HintPath>Assets\References\Iesi.Collections.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\References\Mono.Data.Sqlite">
+ <HintPath>Assets\References\Mono.Data.Sqlite.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\References\Mono.Web">
+ <HintPath>Assets\References\Mono.Web.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\References\MySql.Data">
+ <HintPath>Assets\References\MySql.Data.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\References\NHibernate">
+ <HintPath>Assets\References\NHibernate.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\References\System.Configuration.Install">
+ <HintPath>Assets\References\System.Configuration.Install.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\References\System.Configuration">
+ <HintPath>Assets\References\System.Configuration.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\References\System.Data">
+ <HintPath>Assets\References\System.Data.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\References\System.Drawing">
+ <HintPath>Assets\References\System.Drawing.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\References\System.EnterpriseServices">
+ <HintPath>Assets\References\System.EnterpriseServices.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\References\System.Runtime.Remoting">
+ <HintPath>Assets\References\System.Runtime.Remoting.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\References\System.Runtime.Serialization.Formatters.Soap">
+ <HintPath>Assets\References\System.Runtime.Serialization.Formatters.Soap.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\References\System.Security">
+ <HintPath>Assets\References\System.Security.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\References\System.Web.Services">
+ <HintPath>Assets\References\System.Web.Services.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\References\System.Web">
+ <HintPath>Assets\References\System.Web.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\References\log4net">
+ <HintPath>Assets\References\log4net.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\References\mavaruonline">
+ <HintPath>Assets\References\mavaruonline.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
+      <Project>{F3273B8E-78A8-C7E6-7388-7662FE6EAEAE}</Project>
+      <Name>Assembly-CSharp-firstpass-vs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
+	

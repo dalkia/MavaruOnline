@@ -1,0 +1,56 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/PublicMessageBoard.cs">
+    <Files>
+      <File FileName="Assets/Network Files/ConnectionGUI.js" Line="50" Column="1" />
+      <File FileName="Assets/Scripts/Managers/DatabaseManager.cs" Line="137" Column="26" />
+      <File FileName="Assets/Scripts/UI/MessageBoardUI.cs" Line="145" Column="28" />
+      <File FileName="Assets/Scripts/UI/PersonalMessageBoard.cs" Line="12" Column="14" />
+      <File FileName="Assets/Scripts/UI/PublicMessageBoard.cs" Line="65" Column="21" />
+      <File FileName="Assets/Scripts/UI/ReplyMessageBoard.cs" Line="33" Column="21" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Database" expanded="True" />
+              <Node name="Mappings" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="CharacterComponents" expanded="True" />
+                <Node name="Level Managers" expanded="True" />
+                <Node name="Managers" expanded="True" />
+                <Node name="Plugins" expanded="True" />
+                <Node name="UI" expanded="True">
+                  <Node name="Selectors" expanded="True" />
+                  <Node name="PublicMessageBoard.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="Services" expanded="True" />
+            </Node>
+          </Node>
+          <Node name="Assembly-CSharp-Editor-firstpass" expanded="True" />
+          <Node name="Assembly-CSharp-firstpass" expanded="True" />
+          <Node name="Assembly-UnityScript" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Chat" expanded="True" />
+              <Node name="Network Files" expanded="True" />
+            </Node>
+          </Node>
+          <Node name="Assembly-UnityScript-firstpass" expanded="True" />
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

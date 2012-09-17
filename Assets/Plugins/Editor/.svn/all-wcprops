@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/40/trunk/Assets/Plugins/Editor
+END
+GenerateMaterials.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/19/trunk/Assets/Plugins/Editor/GenerateMaterials.cs
+END
+UpdateCharacterElementDatabase.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/19/trunk/Assets/Plugins/Editor/UpdateCharacterElementDatabase.cs
+END
+EditorHelpers.cs.meta
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/19/trunk/Assets/Plugins/Editor/EditorHelpers.cs.meta
+END
+MassMaterialEditor.cs.meta
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/19/trunk/Assets/Plugins/Editor/MassMaterialEditor.cs.meta
+END
+CreateAssetbundles.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/19/trunk/Assets/Plugins/Editor/CreateAssetbundles.cs
+END
+GenerateMaterials.cs.meta
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/19/trunk/Assets/Plugins/Editor/GenerateMaterials.cs.meta
+END
+UpdateCharacterElementDatabase.cs.meta
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/40/trunk/Assets/Plugins/Editor/UpdateCharacterElementDatabase.cs.meta
+END
+CreateAssetbundles.cs.meta
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/19/trunk/Assets/Plugins/Editor/CreateAssetbundles.cs.meta
+END
+FBXPostprocessor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/19/trunk/Assets/Plugins/Editor/FBXPostprocessor.cs
+END
+MassMaterialEditor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/19/trunk/Assets/Plugins/Editor/MassMaterialEditor.cs
+END
+EditorHelpers.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/19/trunk/Assets/Plugins/Editor/EditorHelpers.cs
+END
+FBXPostprocessor.cs.meta
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/19/trunk/Assets/Plugins/Editor/FBXPostprocessor.cs.meta
+END
