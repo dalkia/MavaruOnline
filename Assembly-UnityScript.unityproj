@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
 	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-	<ProductVersion>9.0.21022</ProductVersion>
+	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{9CC8179E-EA6A-D822-EBC4-3FFDFC35CBCE}</ProjectGuid>
+	<ProjectGuid>{648C1134-E6A1-F694-8B7A-5EFBFB0C4B73}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_3_4_2;UNITY_3_4;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_OSX;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_3_5_4;UNITY_3_5;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_OSX;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_WEBCAM;ENABLE_MICROPHONE;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW;ENABLE_SUBSTANCE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -37,10 +37,10 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -59,76 +59,72 @@
      <None Include="Assets\Mappings\User.hbm.xml" />
      <None Include="Assets\Scripts\Level Managers\DressingRoomLevel\MirrorReflection\MirrorReflection.shader" />
      <None Include="Assets\Mappings\House.hbm.xml" />
- <Reference Include="Assets\References\Castle.DynamicProxy">
+ <Reference Include="Castle.DynamicProxy">
  <HintPath>Assets\References\Castle.DynamicProxy.dll</HintPath>
  </Reference>
- <Reference Include="Assets\References\I18N.West">
- <HintPath>Assets\References\I18N.West.dll</HintPath>
- </Reference>
- <Reference Include="Assets\References\I18N">
+ <Reference Include="I18N">
  <HintPath>Assets\References\I18N.dll</HintPath>
  </Reference>
- <Reference Include="Assets\References\Iesi.Collections">
+ <Reference Include="I18N.West">
+ <HintPath>Assets\References\I18N.West.dll</HintPath>
+ </Reference>
+ <Reference Include="Iesi.Collections">
  <HintPath>Assets\References\Iesi.Collections.dll</HintPath>
  </Reference>
- <Reference Include="Assets\References\Mono.Data.Sqlite">
- <HintPath>Assets\References\Mono.Data.Sqlite.dll</HintPath>
- </Reference>
- <Reference Include="Assets\References\Mono.Web">
- <HintPath>Assets\References\Mono.Web.dll</HintPath>
- </Reference>
- <Reference Include="Assets\References\MySql.Data">
- <HintPath>Assets\References\MySql.Data.dll</HintPath>
- </Reference>
- <Reference Include="Assets\References\NHibernate">
- <HintPath>Assets\References\NHibernate.dll</HintPath>
- </Reference>
- <Reference Include="Assets\References\System.Configuration.Install">
- <HintPath>Assets\References\System.Configuration.Install.dll</HintPath>
- </Reference>
- <Reference Include="Assets\References\System.Configuration">
- <HintPath>Assets\References\System.Configuration.dll</HintPath>
- </Reference>
- <Reference Include="Assets\References\System.Data">
- <HintPath>Assets\References\System.Data.dll</HintPath>
- </Reference>
- <Reference Include="Assets\References\System.Drawing">
- <HintPath>Assets\References\System.Drawing.dll</HintPath>
- </Reference>
- <Reference Include="Assets\References\System.EnterpriseServices">
- <HintPath>Assets\References\System.EnterpriseServices.dll</HintPath>
- </Reference>
- <Reference Include="Assets\References\System.Runtime.Remoting">
- <HintPath>Assets\References\System.Runtime.Remoting.dll</HintPath>
- </Reference>
- <Reference Include="Assets\References\System.Runtime.Serialization.Formatters.Soap">
- <HintPath>Assets\References\System.Runtime.Serialization.Formatters.Soap.dll</HintPath>
- </Reference>
- <Reference Include="Assets\References\System.Security">
- <HintPath>Assets\References\System.Security.dll</HintPath>
- </Reference>
- <Reference Include="Assets\References\System.Web.Services">
- <HintPath>Assets\References\System.Web.Services.dll</HintPath>
- </Reference>
- <Reference Include="Assets\References\System.Web">
- <HintPath>Assets\References\System.Web.dll</HintPath>
- </Reference>
- <Reference Include="Assets\References\log4net">
+ <Reference Include="log4net">
  <HintPath>Assets\References\log4net.dll</HintPath>
  </Reference>
- <Reference Include="Assets\References\mavaruonline">
+ <Reference Include="mavaruonline">
  <HintPath>Assets\References\mavaruonline.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.Data.Sqlite">
+ <HintPath>Assets\References\Mono.Data.Sqlite.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.Web">
+ <HintPath>Assets\References\Mono.Web.dll</HintPath>
+ </Reference>
+ <Reference Include="MySql.Data">
+ <HintPath>Assets\References\MySql.Data.dll</HintPath>
+ </Reference>
+ <Reference Include="NHibernate">
+ <HintPath>Assets\References\NHibernate.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Configuration">
+ <HintPath>Assets\References\System.Configuration.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Configuration.Install">
+ <HintPath>Assets\References\System.Configuration.Install.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Data">
+ <HintPath>Assets\References\System.Data.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Drawing">
+ <HintPath>Assets\References\System.Drawing.dll</HintPath>
+ </Reference>
+ <Reference Include="System.EnterpriseServices">
+ <HintPath>Assets\References\System.EnterpriseServices.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Remoting">
+ <HintPath>Assets\References\System.Runtime.Remoting.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization.Formatters.Soap">
+ <HintPath>Assets\References\System.Runtime.Serialization.Formatters.Soap.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security">
+ <HintPath>Assets\References\System.Security.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Web">
+ <HintPath>Assets\References\System.Web.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Web.Services">
+ <HintPath>Assets\References\System.Web.Services.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{F3273B8E-78A8-C7E6-7388-7662FE6EAEAE}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
+      <Project>{9A5A79C6-660F-6265-1DB8-9365B3C954AE}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
-      <Project>{9E508D39-56EA-038D-A6C1-73641E1AEB21}</Project>
-      <Name>Assembly-UnityScript-firstpass</Name>
-    </ProjectReference>
+      <Project>{0E707338-E6CE-3229-8376-746FB5F76623}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -140,4 +136,3 @@
   -->
   
 </Project>
-	

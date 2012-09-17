@@ -1,0 +1,70 @@
+fileFormatVersion: 2
+guid: abccdc1bcd11bf67a00037684ada8c59
+ModelImporter:
+  fileIDToRecycleName:
+    4300000: polySurface193
+    4300002: polySurface263
+    4300004: polySurface264
+    4300006: polySurface265
+    4300008: polySurface266
+    4300010: diningChair
+    4300012: polySurface268
+    4300014: polySurface269
+    4300016: polySurface234
+    4300018: polySurface235
+    4300020: polySurface236
+    4300022: polySurface245
+    4300024: polySurface246
+    4300026: polySurface270
+    4300028: polySurface281
+    100100000: DataTemplate __Singleton__
+  serializedVersion: 10
+  materials:
+    importMaterials: 1
+    materialName: 3
+    materialSearch: 1
+  animations:
+    generateAnimations: 3
+    bakeSimulation: 0
+    splitAnimations: 1
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMesh: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 0
+    normalImportMode: 0
+    tangentImportMode: 1
+  textMetaNamesToFileIDs:
+    //RootNode:
+      data:
+        first: 1
+        second: c2860100
+      data:
+        first: 4
+        second: a21a0600
+      data:
+        first: 23
+        second: 60182300
+      data:
+        first: 33
+        second: a05a3200
+      data:
+        first: 111
+        second: 605fa900
