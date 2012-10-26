@@ -4,7 +4,7 @@ using System.Collections;
 public class GameStateManager : MonoBehaviour {
 	
 	public enum GameState{IN_NETWORK_CONNECTION, IN_LOGIN, IN_DRESSING_ROOM, IN_HOME, 
-							IN_FRIENDS_HOUSE, IN_COMMON_PLACE, IN_MESSAGE_BOARD};
+							IN_FRIENDS_HOUSE, IN_COMMON_PLACE, IN_MESSAGE_BOARD, WAITING_LOBBY, IN_GAME_LOBBY};
 	GameState state = GameStateManager.GameState.IN_NETWORK_CONNECTION;
 	
 	string lodingScene;
@@ -41,6 +41,14 @@ public class GameStateManager : MonoBehaviour {
 	public void GoOutside(){
 		LoadScene("PrivateWorld", GameState.IN_COMMON_PLACE);
 	}
+	
+	public void WaitingLobby(){
+		LoadScene("WaitingLobby", GameState.WAITING_LOBBY);
+	}
+	public void GoToGameLobby(){
+		LoadScene("GameLobby", GameState.IN_GAME_LOBBY);
+	}
+	
 	
 	public void EnterWorld(){
 		if (MavaruOnlineMain.DatabaseManager.CharacterConfiguration == null){

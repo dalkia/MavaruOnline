@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Entidades;
 
-class ConnectedUser{
+public class ConnectedUser{
 	public User user;
 	public NetworkPlayer networkPlayer;
 	public bool inCommonPlace = true;
 }
 
-class ConnectedUsers{
+public class ConnectedUsers{
 	
 	Dictionary<NetworkPlayer, ConnectedUser> players = new Dictionary<NetworkPlayer, ConnectedUser>();
 	Dictionary<string, ConnectedUser> users = new Dictionary<string, ConnectedUser>();
@@ -35,7 +35,6 @@ class ConnectedUsers{
 	}
 	
 	public void Login(NetworkPlayer np, User user){
-		Debug.Log("Connecting user: " + user.Username + " with id: " + np.guid );
 		ConnectedUser uc = new ConnectedUser();
 		uc.networkPlayer = np;
 		uc.user = user;

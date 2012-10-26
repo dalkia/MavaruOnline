@@ -71,7 +71,6 @@ public class LabelAboveCharacter : MonoBehaviour {
 		Vector3 screenPos = Camera.main.WorldToScreenPoint(target.position);
 		
 		if(screenPos.z < 0) return;
-		Debug.Log("x: " + screenPos.x + "y: " + screenPos.y + "z: " + screenPos.z);
 		
 		
 		if(hasWriten) {

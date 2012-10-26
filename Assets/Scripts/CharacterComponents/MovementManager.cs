@@ -6,7 +6,7 @@ public class MovementManager : MonoBehaviour {
 	public static string WALK = "walk";
 	public static string IDLE = "idle1";
 	
-	public CharacterController characterController;
+	
 	public Character character;
 	protected Transform thisTransform;
 	protected bool movementEnabled;

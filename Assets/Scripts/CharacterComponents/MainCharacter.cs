@@ -8,6 +8,8 @@ public class MainCharacter : Character {
 	public Camera[] cameras;
 	int currentCamera;
 	
+	private int minigameId;
+	
 	public static MainCharacter CreateMainCharacter(User user){
 		GameObject chars = GameObject.Find("Characters");
 		if(chars == null){
@@ -21,6 +23,24 @@ public class MainCharacter : Character {
 		MainCharacter character = go.GetComponent<MainCharacter>();
 		character.user = user;
 		return character;
+	}
+	
+	public int CurrentCamera{
+		set{
+			currentCamera = value;
+		}
+		get{
+			return currentCamera;
+		}
+	}
+	
+	public int MinigameId{
+		set{
+			minigameId = value;
+		}
+		get{
+			return minigameId;
+		}
 	}
 	
 	public override void Start () {
@@ -37,7 +57,7 @@ public class MainCharacter : Character {
 		currentCamera = ++currentCamera % totalCameras;
 		
 		for(int i = 0; i< totalCameras; i++){
-			cameras[i].enabled = currentCamera == i; 
+			cameras[i].enabled = currentCamera == i;
 		}
 	}
 	

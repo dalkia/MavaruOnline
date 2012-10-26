@@ -21,10 +21,38 @@ public class MainCharacterMovement : MovementManager {
 		base.Update();
 		
 		if(movementEnabled){
+			
 			float vertical = Input.GetAxis("Vertical");
 			float horizontal = Input.GetAxis("Horizontal");
-			float jump = Input.GetAxis("Jump");
-		 
+			//float jump = Input.GetAxis("Jump");
+        
+			if(Input.GetKey(KeyCode.W)){
+				transform.Translate(Vector3.forward * Time.deltaTime * 3);
+				Play(WALK);
+				
+			}
+			if(Input.GetKey(KeyCode.S)){
+				transform.Translate(Vector3.back * Time.deltaTime * 3);
+				Play(WALK);
+				if(!audio.isPlaying)
+					audio.Play();
+				
+			} else {
+				if(audio.isPlaying)
+					audio.Stop();
+			}
+			if(Input.GetKey(KeyCode.A)){
+				this.transform.Rotate(0, -1 * rotationSpeed * Time.deltaTime , 0);
+				Play(WALK);
+				
+			}
+			if(Input.GetKey(KeyCode.D)){
+				this.transform.Rotate(0, rotationSpeed * Time.deltaTime , 0);
+				Play(WALK);
+			}
+			
+			
+		 /*
 			if ( vertical > 0) {
 				Walk(vertical);
 			}
@@ -32,7 +60,7 @@ public class MainCharacterMovement : MovementManager {
 			if ( horizontal != 0) {
 				Turn(horizontal);
 				
-			}
+			}*/
 			
 			/*if ( jump != 0 && !jumping && !falling) {
 				jumping = true;
@@ -40,8 +68,8 @@ public class MainCharacterMovement : MovementManager {
 			
 			Jump();*/
 			
-			if( horizontal == 0 && vertical == 0 && jump == 0 ){
-				Idle();
+			if( horizontal == 0 && vertical == 0){
+				Play(IDLE);	
 			}
 		}
 	}
@@ -57,20 +85,28 @@ public class MainCharacterMovement : MovementManager {
 		}
 		return walking;
 	}
-
+	
+	/*
 	void Walk(float delta){
 		//this.transform.position += this.transform.forward * walkSpeed * delta;
+		
+		thisTransform.position += new Vector3(0, (Physics.gravity.y * Time.deltaTime), 0);
 		characterController.Move(thisTransform.forward * walkSpeed * delta);
-		thisTransform.position = new Vector3(thisTransform.position.x, 0, thisTransform.position.z);
+		
+		//thisTransform.position = new Vector3(thisTransform.position.x, yPosition , thisTransform.position.z);
 		Play(WALK);
 	}
 	
 	void Turn(float delta){
 		this.transform.Rotate(0, delta * rotationSpeed * Time.deltaTime , 0);
+		Vector3 gravityEffect = new Vector3(0, (Physics.gravity.y * Time.deltaTime), 0);
+		characterController.Move (gravityEffect * Time.deltaTime);
 		Play(WALK);	
 	}
 	
 	void Idle(){
+		Vector3 gravityEffect = new Vector3(0, (Physics.gravity.y * Time.deltaTime), 0);
+		characterController.Move (gravityEffect * Time.deltaTime);
 		Play(IDLE);	
 	}
 	
@@ -96,4 +132,5 @@ public class MainCharacterMovement : MovementManager {
 		}
 		
 	}
+	*/
 }

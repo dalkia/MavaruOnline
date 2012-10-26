@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{0E707338-E6CE-3229-8376-746FB5F76623}</ProjectGuid>
+	<ProjectGuid>{9E508D39-56EA-038D-A6C1-73641E1AEB21}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_3_5_4;UNITY_3_5;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_OSX;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_WEBCAM;ENABLE_MICROPHONE;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW;ENABLE_SUBSTANCE</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_3_5_1;UNITY_3_5;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_OSX;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_WEBCAM;ENABLE_MICROPHONE;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW;ENABLE_SUBSTANCE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -37,10 +37,10 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -50,64 +50,64 @@
      <None Include="Assets\Mappings\User.hbm.xml" />
      <None Include="Assets\Scripts\Level Managers\DressingRoomLevel\MirrorReflection\MirrorReflection.shader" />
      <None Include="Assets\Mappings\House.hbm.xml" />
- <Reference Include="Castle.DynamicProxy">
+ <Reference Include="Assets\References\Castle.DynamicProxy">
  <HintPath>Assets\References\Castle.DynamicProxy.dll</HintPath>
  </Reference>
- <Reference Include="I18N">
+ <Reference Include="Assets\References\I18N">
  <HintPath>Assets\References\I18N.dll</HintPath>
  </Reference>
- <Reference Include="I18N.West">
+ <Reference Include="Assets\References\I18N.West">
  <HintPath>Assets\References\I18N.West.dll</HintPath>
  </Reference>
- <Reference Include="Iesi.Collections">
+ <Reference Include="Assets\References\Iesi.Collections">
  <HintPath>Assets\References\Iesi.Collections.dll</HintPath>
  </Reference>
- <Reference Include="log4net">
+ <Reference Include="Assets\References\log4net">
  <HintPath>Assets\References\log4net.dll</HintPath>
  </Reference>
- <Reference Include="mavaruonline">
+ <Reference Include="Assets\References\mavaruonline">
  <HintPath>Assets\References\mavaruonline.dll</HintPath>
  </Reference>
- <Reference Include="Mono.Data.Sqlite">
+ <Reference Include="Assets\References\Mono.Data.Sqlite">
  <HintPath>Assets\References\Mono.Data.Sqlite.dll</HintPath>
  </Reference>
- <Reference Include="Mono.Web">
+ <Reference Include="Assets\References\Mono.Web">
  <HintPath>Assets\References\Mono.Web.dll</HintPath>
  </Reference>
- <Reference Include="MySql.Data">
+ <Reference Include="Assets\References\MySql.Data">
  <HintPath>Assets\References\MySql.Data.dll</HintPath>
  </Reference>
- <Reference Include="NHibernate">
+ <Reference Include="Assets\References\NHibernate">
  <HintPath>Assets\References\NHibernate.dll</HintPath>
  </Reference>
- <Reference Include="System.Configuration">
+ <Reference Include="Assets\References\System.Configuration">
  <HintPath>Assets\References\System.Configuration.dll</HintPath>
  </Reference>
- <Reference Include="System.Configuration.Install">
+ <Reference Include="Assets\References\System.Configuration.Install">
  <HintPath>Assets\References\System.Configuration.Install.dll</HintPath>
  </Reference>
- <Reference Include="System.Data">
+ <Reference Include="Assets\References\System.Data">
  <HintPath>Assets\References\System.Data.dll</HintPath>
  </Reference>
- <Reference Include="System.Drawing">
+ <Reference Include="Assets\References\System.Drawing">
  <HintPath>Assets\References\System.Drawing.dll</HintPath>
  </Reference>
- <Reference Include="System.EnterpriseServices">
+ <Reference Include="Assets\References\System.EnterpriseServices">
  <HintPath>Assets\References\System.EnterpriseServices.dll</HintPath>
  </Reference>
- <Reference Include="System.Runtime.Remoting">
+ <Reference Include="Assets\References\System.Runtime.Remoting">
  <HintPath>Assets\References\System.Runtime.Remoting.dll</HintPath>
  </Reference>
- <Reference Include="System.Runtime.Serialization.Formatters.Soap">
+ <Reference Include="Assets\References\System.Runtime.Serialization.Formatters.Soap">
  <HintPath>Assets\References\System.Runtime.Serialization.Formatters.Soap.dll</HintPath>
  </Reference>
- <Reference Include="System.Security">
+ <Reference Include="Assets\References\System.Security">
  <HintPath>Assets\References\System.Security.dll</HintPath>
  </Reference>
- <Reference Include="System.Web">
+ <Reference Include="Assets\References\System.Web">
  <HintPath>Assets\References\System.Web.dll</HintPath>
  </Reference>
- <Reference Include="System.Web.Services">
+ <Reference Include="Assets\References\System.Web.Services">
  <HintPath>Assets\References\System.Web.Services.dll</HintPath>
  </Reference>
   </ItemGroup>

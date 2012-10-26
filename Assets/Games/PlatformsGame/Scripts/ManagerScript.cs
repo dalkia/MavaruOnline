@@ -4,15 +4,18 @@ using System.Collections.Generic;
 
 public class ManagerScript : MonoBehaviour
 {
-	private Color[] colors;
+	private bool gameReady;
+	
+	//private Color[] colors;
 	public GameObject flag;
 	private GameObject[] platforms;
 	private int platformCounter = 9;
-	private IList<int> indexes;
+	//private IList<int> indexes;
 	private IList<Color> previousColors;
-	private Color randomColor;
+	private Color flagColor;
 	private int randomColorIndex;
 	
+	private bool flagChanged;
 	private Coroutine coroutine;
 	private Coroutine coroutine1;
 	
@@ -29,19 +32,32 @@ public class ManagerScript : MonoBehaviour
 	
 	public int turn;
 	public int round;
+	private bool colorsReady;
+	private bool firstLoop;
 	
 	public GameObject round1Texture;
 	public GameObject round2Texture;
 	public GameObject round3Texture;
 	public Object obj;	
 	
-	private GameObject[] characters;
+	private MainCharacter character;
 	public int charactersCounter;
+	private PlatformGameClient platformClient;
 	
 	
 	// Use this for initialization
 	void Start ()
 	{
+		platformClient =gameObject.GetComponent<PlatformGameClient>();	
+		gameReady = false;
+		character = CharacterHolder.Instance.MainCharacter;
+		character.transform.rotation = Quaternion.identity;
+		character.Show = true;
+		character.MovementManager.Enable(false);
+		character.EnableCamera(false);
+		//character.cameras[character.CurrentCamera].enabled = false;
+		character.EnterPublicWorld(true);
+		
 		turn = 0;
 		round = 1;
 		
@@ -49,23 +65,21 @@ public class ManagerScript : MonoBehaviour
 		settingFlagTime = 1f;
 		settingPlatformsWhiteTime = 1f;
 		movingPlatformsTime = 4f;
-			
+		//colorsForRound = new Dictionary<int, List<Color>>();	
 		platformsSet = false;
 		randomColorIndex = -1;		
 		flag = GameObject.Find ("Flag");
-		colors = new Color[platformCounter];
+		flagChanged = false;
+		//colors = new Color[platformCounter];
 		platforms = new GameObject[platformCounter];		
-		indexes = new List<int> ();
+		//indexes = new List<int> ();
 		
-		characters = new GameObject[charactersCounter];		
+		character = CharacterHolder.Instance.MainCharacter;		
+		character.gameObject.AddComponent("CharacterScript");
 		
-		addColors ();
-		setIndexes ();		
-		setStartPlatforms ();
+		colorsReady = false;
+		SetupPlatforms();
 		SetCharacters();
-		
-		
-		obj = Instantiate (round1Texture, round1Texture.transform.position, round1Texture.transform.rotation);
 
 		if (coroutine1 == null) {
 			coroutine1 = StartCoroutine (ChangeTexture ());					
@@ -76,97 +90,117 @@ public class ManagerScript : MonoBehaviour
 	}
 	
 	void SetCharacters(){
-		for(int i = 0; i < charactersCounter; i++){
-			characters[i] = GameObject.Find ("Character" + (i + 1)); 
+	/*	for(int i = 0; i < charactersCounter; i++){
+			character = GameObject.Find ("Character" + (i + 1)); 
 		}
+		*/
 	}
 	
 	void Update ()
-	{		
-		if (!platformsSet) {
-			if (turn == 0 || turn == 2 || turn == 4 || turn == 11) {
-				Debug.Log ("SET PLATFORMS");
-				setIndexes ();
-				SetPlatforms ();
-				if (turn == 2) {
-					round++;
+	{	
+		if(gameReady){
+			if (!platformsSet) {
+				if(turn == 0)
+					obj = Instantiate (round1Texture, round1Texture.transform.position, round1Texture.transform.rotation);
 					
-					obj = Instantiate (round2Texture, round2Texture.transform.position, round2Texture.transform.rotation);
-
-					if (coroutine1 == null) {
-						coroutine1 = StartCoroutine (ChangeTexture ());					
-					}
-					
-					settingPlatformsWhiteTime = 0f;
-					movingPlatformsTime = 2f;
-				}
-				if (turn == 4) {
-					round++;
-					SaveColors ();
-					
-					
-					obj = Instantiate(round3Texture, round3Texture.transform.position, round3Texture.transform.rotation);
-
-					if (coroutine1 == null) {
-							coroutine1 = StartCoroutine (ChangeTexture());					
-					}
-					settingPlatformsWhiteTime = 1f;
-					settingFlagTime = 0.5f;				
-					
-				}
-				if (turn == 11) {
-					//a definir.
-					
-				}
-				
-			}	
-			if(round ==3){
-				SetPreviousColors();
-			}
-			platformsSet = true;
-			if (coroutine == null) {
-				coroutine = StartCoroutine (WaitToChangeFlagColor ());					
-			}
+				if (turn == 0 || turn == 2 || turn == 4 || turn == 11) {
+					Debug.Log ("SET PLATFORMS");
+					GetColors(round);//indexes lo maneja el server
+					if(colorsReady){
+						Debug.Log("hola:" + turn);
+						if (turn == 2) {
+								round++;
+								obj = Instantiate (round2Texture, round2Texture.transform.position, round2Texture.transform.rotation);
+								if (coroutine1 == null) {
+									coroutine1 = StartCoroutine (ChangeTexture ());					
+								}
+								
+								settingPlatformsWhiteTime = 0f;
+								movingPlatformsTime = 2f;
+							}
+							else if (turn == 4) {
+								round++;
+								SaveColors();
+								
+								obj = Instantiate(round3Texture, round3Texture.transform.position, round3Texture.transform.rotation);
 			
-		} else {
-			if (randomColorIndex != -1) {
-				if (changeFlagColor) {
-					Debug.Log ("CHANGE FLAG COLOR");
-					if (coroutine == null) {
-						coroutine = StartCoroutine (WaitToTurnPlatformsWhite ());					
-					}
-					
-				} 
-				if (platformsWhite) {
-					Debug.Log ("SET PLATFORMS WHITE");
-					if (coroutine == null) {
-						coroutine = StartCoroutine (WaitToLowerPlatforms ());					
-					}
-				}
-				if (goingDown) {
-					Debug.Log ("LOWER PLATFORMS");
-					LowerPlatforms ();
-					if (coroutine == null) {
-						coroutine = StartCoroutine (WaitToElevatePlatforms ());					
-					}
-				} 
-				if (goingUp) {
-					Debug.Log ("ELEVATE PLATFORMS");
-					ElevatePlatforms ();
-					if (coroutine == null) {
-						coroutine = StartCoroutine (WaitToChangeColor ());	
-						turn++;
-						//ReviveEveryone();
+								if (coroutine1 == null) {
+										coroutine1 = StartCoroutine (ChangeTexture());					
+								}
+								settingPlatformsWhiteTime = 1f;
+								settingFlagTime = 0.5f;				
+								
+							}
+							else if (turn == 11) {
+								//a definir.
+								
+							}
+						colorsReady = false;
 					}
 				}	
+					if(round ==3 ){
+						SetPreviousColors();
+					}
+					if(!flagChanged){
+					platformClient.GetFlag(turn);
+					}
+					platformsSet = true;
+					if (coroutine == null ) {
+						coroutine = StartCoroutine (WaitToChangeFlagColor());					
+					}
+							
+				} else {
+					if (randomColorIndex != -1) {
+					
+						if (changeFlagColor) {
+							Debug.Log ("CHANGE FLAG COLOR");
+							if (coroutine == null) {
+								coroutine = StartCoroutine (WaitToTurnPlatformsWhite ());					
+							}
+							
+						} 
+						if (platformsWhite) {
+							Debug.Log ("SET PLATFORMS WHITE");
+							if (coroutine == null) {
+								coroutine = StartCoroutine (WaitToLowerPlatforms ());					
+							}
+						}
+						if (goingDown) {
+							Debug.Log ("LOWER PLATFORMS");
+							LowerPlatforms ();
+							if (coroutine == null) {
+								coroutine = StartCoroutine (WaitToElevatePlatforms ());					
+							}
+						} 
+						if (goingUp) {
+							Debug.Log ("ELEVATE PLATFORMS");
+							ElevatePlatforms ();
+							if (coroutine == null) {
+								coroutine = StartCoroutine (WaitToChangeColor ());	
+								turn++;
+								//ReviveEveryone();
+							}
+						}	
+					}
+				}
 			}
-		}	
+				
+	  }
 	
-	}
+	
 	
 	void ReviveEveryone(){
 		for(int i = 0; i<charactersCounter; i++){
-			characters[i].SendMessage("Revive");			
+			character.SendMessage("Revive");			
+		}
+	}
+	
+	public bool IsGameReady {
+		set{
+			gameReady = value;
+		}
+		get{
+			return gameReady;
 		}
 	}
 	
@@ -194,60 +228,44 @@ public class ManagerScript : MonoBehaviour
 		coroutine1 = null;
 	}	
 	
-	private void setStartPlatforms ()
+	private void SetupPlatforms()
 	{
 		for (int i = 0; i<platformCounter; i++) {
 			platforms [i] = GameObject.Find ("Platform" + (i + 1));
-			SetPlatformsColor (i);
 		}	
 		
 	}
 	
-	private void setIndexes ()
+
+	
+	private void GetColors(int round)
 	{
-		for (int i =0; i<platformCounter; i++) {
-			indexes.Add (i);
+	 	platformClient.GetColors(round);
+	}
+	
+	public void SetPlatforms1(List<Color> colors)
+	{
+		Debug.Log("setPlatForm");
+		for (int i = 0; i<platformCounter; i++) {
+			SetPlatformsColor(i,colors[i]);
 		}
-		
+			colorsReady = true;
 	}
 	
-	private void SetPlatforms ()
+	
+	
+	private void SetPlatformsColor (int platformIndex,Color color)
 	{
-		
-		for (int i = 0; i<platformCounter; i++) {			
-			SetPlatformsColor (i);
-		}
-	}
-	
-	private void addColors ()
-	{				
-		colors [0] = new Color(255f/255f,102f/255f,0);
-		colors [1] = Color.red;
-		colors [2] = Color.green;
-		colors [3] = Color.yellow;
-		colors [4] = Color.cyan;
-		colors [5] = new Color(255f/255f,102f/255f,102f/255f);
-		colors [6] = new Color(0f/255f,0,152f/255f);
-		colors [7] = Color.white;
-		colors [8] = new Color(102f/255f,0f/255f,51f/255f);		
-		
-	}
-	
-	private void SetPlatformsColor (int platformIndex)
-	{
-		int index = Random.Range (0, indexes.Count);
-		Color color = colors [indexes [index]];
 		platforms [platformIndex].renderer.material.color = color;
-		PlatformScript script = (PlatformScript)platforms [platformIndex].GetComponent<PlatformScript> ();
+		PlatformScript script = (PlatformScript)platforms [platformIndex].GetComponent<PlatformScript>();
 		script.setPreviousColor (color);
-		indexes.Remove (indexes [index]);			
 	}
 	
 	IEnumerator WaitToChangeFlagColor ()
 	{
 		yield return new WaitForSeconds(settingPlatformsTime);
 		
-		flag.renderer.material.color = getRandomColor ();
+		flag.renderer.material.color = GetFlagColor();
 		Stop ();		
 		coroutine = null;			
 		changeFlagColor = true;
@@ -313,19 +331,25 @@ public class ManagerScript : MonoBehaviour
 		}
 	}
 	
-	private Color getRandomColor ()
+	private Color GetFlagColor ()
 	{	
-		randomColorIndex = UnityEngine.Random.Range (0, platformCounter - 1); 
-		randomColor = colors [randomColorIndex];
-		return randomColor;
+		randomColorIndex = 1;
+		flagChanged = false;
+		if(flagColor == null) flagColor = Color.green;
+		return flagColor;//randomColor;
+	}
+	public void SetFlagColor(Color newColor){
+		flagChanged = true;
+		flagColor = newColor;
 	}
 	
 	private void LowerPlatforms ()
 	{
 		for (int i =0; i< platformCounter; i++) {
 			PlatformScript script = (PlatformScript)platforms [i].GetComponent<PlatformScript> ();		
-			script.SetUp (false);			
-			if (script.getPreviousColor () != randomColor) {
+			script.SetUp (false);
+			Debug.Log("previous: "+script.getPreviousColor() +" ,color: "+flagColor);
+			if (script.getPreviousColor() != flagColor) {
 				script.SetDown (true);				
 			}
 		}		
@@ -336,7 +360,7 @@ public class ManagerScript : MonoBehaviour
 		for (int i =0; i< platformCounter; i++) {
 			PlatformScript script = (PlatformScript)platforms [i].GetComponent<PlatformScript> ();		
 			script.SetDown (false);				
-			if (script.getPreviousColor () != randomColor) {
+			if (script.getPreviousColor () != flagColor) {
 				script.SetUp (true);
 			}
 		}		

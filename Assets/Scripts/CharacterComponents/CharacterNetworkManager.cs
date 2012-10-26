@@ -14,15 +14,20 @@ public class CharacterNetworkManager : MonoBehaviour {
 		
 		currentTime += Time.deltaTime;
 		if( currentTime >= timeInSeconds && mainCharacter.MovementManager.IsWalking()){
-			Debug.Log("Sending Position");
+			
 			currentTime = 0;
-			networkView.RPC("UpdateCharacterPosition", RPCMode.AllBuffered, mainCharacter.user.Username,
-			               	transform.position, transform.rotation);
+			
+			if(inPublicWorld){
+				networkView.RPC("UpdateCharacterPosition", RPCMode.AllBuffered, mainCharacter.user.Username,
+			         	      	transform.position, transform.rotation);
+			}
+			
 		}
 	}
 	
 	[RPC]
 	void UpdateCharacterPosition(string user, Vector3 position, Quaternion rotation) {
+		
 		if(inPublicWorld && user != mainCharacter.user.Username){
 			Character character = CharacterHolder.Instance.GetCharacter(user);
 			if(character != null){
@@ -41,6 +46,13 @@ public class CharacterNetworkManager : MonoBehaviour {
 			}
 		}
 	}
+
+	[RPC]
+	void LeftGame(string user) {
+		Character character = CharacterHolder.Instance.GetCharacter(user);//ponerlo en true cuando entra
+		if(character != null) character.Show = false;	
+	}
+	
 	
 	[RPC]
 	void NotLongerInPublicWorld(string user) {

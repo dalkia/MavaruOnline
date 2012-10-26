@@ -25,10 +25,14 @@ public class MavaruOnlineMain : MonoBehaviour {
 	public static GameStateManager GameStateManager{
 		get{return MavaruOnlineMain.Instance.stateManager;}
 	}
+	//public static PlatformGameManager PlatformGameManager{
+	//	get{return MavaruOnlineMain.Instance.platformManager;}
+	//}
 	
 	public DatabaseManager data;
 	public NetworkManager network;
 	public GameStateManager stateManager;
+	//public PlatformGameManager platformManager;
 	
 	void Start(){
 		GameObject.DontDestroyOnLoad(this.gameObject);

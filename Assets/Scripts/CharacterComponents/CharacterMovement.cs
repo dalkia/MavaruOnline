@@ -11,6 +11,9 @@ public class CharacterMovement : MovementManager {
 	protected Quaternion startRot;
 	protected Vector3 endPos;
 	protected Quaternion endRot;
+	public CharacterController characterController;
+	
+	private const float updateTime = 0.2f;
 
 	public override void Start () {
 		base.Start();
@@ -18,21 +21,23 @@ public class CharacterMovement : MovementManager {
 	
 	public override void Update () {
 		base.Update();
-		
 		if(walking){
-			
-			if(Vector3.Distance(thisTransform.position, endPos) <= 0.5f){
+			if(Time.time - currentTime >= updateTime){
 				this.walking = false;
+				Debug.Log("Start" + thisTransform.position);
+				Debug.Log("End" + endPos);
+
 				Play(IDLE);
 			
-			} else {
+			} else  {
 				float i = Time.deltaTime;
 				thisTransform.position = Vector3.Lerp(thisTransform.position, endPos,i);
 				thisTransform.rotation = Quaternion.Lerp(thisTransform.rotation, endRot,i);
+				Debug.Log ("Esta caminando");
 				Play(WALK);
 			} 
 			
-			thisTransform.position = new Vector3(thisTransform.position.x, 0, thisTransform.position.z);
+			//thisTransform.position = new Vector3(thisTransform.position.x, thisTransform.position.y, thisTransform.position.z);
 		
 		}else{
 			Play(IDLE);
@@ -81,10 +86,13 @@ public class CharacterMovement : MovementManager {
 		endRot = rotation;
 		this.walking = true;
 		
-		//characterController.Move(position);
-		//this.transform.rotation = rotation;
-		//this.transform.position = position;
-		//Play(WALK);
+		characterController.Move(position);
+		this.transform.rotation = rotation;
+		this.transform.position = position;
+		Debug.Log ("Esta caminando");
+		
+		currentTime = Time.time;
+		Play(WALK);
 	}
 	
 	

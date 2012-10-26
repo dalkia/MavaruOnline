@@ -34,7 +34,6 @@ public class FriendsList : MonoBehaviour {
 	void Update () {		
 		currentTime += 1;
 		if( currentTime >= 120){
-			Debug.Log("UpdatingList");
 			currentTime = 0;
 			MavaruOnlineMain.DatabaseManager.GetAllUser(ShowAllUsers);
 		}
