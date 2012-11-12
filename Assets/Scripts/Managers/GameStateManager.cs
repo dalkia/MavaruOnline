@@ -49,7 +49,6 @@ public class GameStateManager : MonoBehaviour {
 		LoadScene("GameLobby", GameState.IN_GAME_LOBBY);
 	}
 	
-	
 	public void EnterWorld(){
 		if (MavaruOnlineMain.DatabaseManager.CharacterConfiguration == null){
 			GoToDressingRoom();	

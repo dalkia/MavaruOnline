@@ -34,6 +34,10 @@ public class CharacterNetworkManager : MonoBehaviour {
 				(character.MovementManager as CharacterMovement).Walk(position, rotation);
 				character.Show = true;	
 			}
+			
+			//if(Application.loadedLevelName.Equals("BallsGame")){
+			//	GameObject.Find ("Ball Game Manager").GetComponent<BallManagerScript>().UpdateBallPosition(user, position);	
+			//}
 		}
 	}
 	

@@ -45,6 +45,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Database\CreateDatabaseUnity.cs" />
+     <Compile Include="Assets\Games\BallsGame\Scripts\BallCharacterScript.cs" />
+     <Compile Include="Assets\Games\BallsGame\Scripts\BallManagerScript.cs" />
+     <Compile Include="Assets\Games\BallsGame\Scripts\ChoiceScript.cs" />
+     <Compile Include="Assets\Games\BallsGame\Scripts\PilarScript.cs" />
+     <Compile Include="Assets\Games\BallsGame\Scripts\SphereScript.cs" />
      <Compile Include="Assets\Games\MiniGame.cs" />
      <Compile Include="Assets\Games\MiniGameManager.cs" />
      <Compile Include="Assets\Games\PlatformsGame\Scripts\CharacterScript.cs" />
@@ -52,6 +57,7 @@
      <Compile Include="Assets\Games\PlatformsGame\Scripts\PlatformScript.cs" />
      <Compile Include="Assets\Games\PlatformsGame\Scripts\Tuple.cs" />
      <Compile Include="Assets\Games\Scripts\ArcadeScript.cs" />
+     <Compile Include="Assets\Games\Scripts\BallsScript.cs" />
      <Compile Include="Assets\Games\Scripts\enterScript.cs" />
      <Compile Include="Assets\Network Files\RigidAssign.cs" />
      <Compile Include="Assets\Properties\AssemblyInfo.cs" />
@@ -72,6 +78,7 @@
      <Compile Include="Assets\Scripts\Level Managers\InsideHouseManager.cs" />
      <Compile Include="Assets\Scripts\Level Managers\OutsideWorldManager.cs" />
      <Compile Include="Assets\Scripts\Level Managers\PlatformGameClient.cs" />
+     <Compile Include="Assets\Scripts\Level Managers\SumoGameClient.cs" />
      <Compile Include="Assets\Scripts\Managers\CharacterHolder.cs" />
      <Compile Include="Assets\Scripts\Managers\ConnectedUsers.cs" />
      <Compile Include="Assets\Scripts\Managers\DatabaseManager.cs" />
@@ -81,6 +88,7 @@
      <Compile Include="Assets\Scripts\Managers\MiniJSON.cs" />
      <Compile Include="Assets\Scripts\Managers\NetworkManager.cs" />
      <Compile Include="Assets\Scripts\Managers\PlatformGameServer.cs" />
+     <Compile Include="Assets\Scripts\Managers\SumoGameServer.cs" />
      <Compile Include="Assets\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Plugins\Chat.cs" />
      <Compile Include="Assets\Scripts\Plugins\EnterLobby.cs" />

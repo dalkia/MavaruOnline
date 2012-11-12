@@ -42,7 +42,7 @@ public class CharacterScript : MonoBehaviour {
 	}
 	
     void Update() {
-		if(transform.position.y < -3f && isPlaying){	
+		if(transform.position.y < 9997f && isPlaying){	
 			Instantiate(stars, transform.position,transform.rotation);
 			GetComponent<Character>().Show = false;
 			
@@ -74,7 +74,7 @@ public class CharacterScript : MonoBehaviour {
 	}
 	
 	public void CharacterLostGame(string username){
-		CharacterHolder.Instance.GetCharacter(username).Show = false;
+		//CharacterHolder.Instance.GetCharacter(username).Show = false;
 	}
 	
 	public bool IsDead(){

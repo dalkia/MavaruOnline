@@ -22,7 +22,7 @@ public class PlatformScript : MonoBehaviour {
 	
 	public void ResetPosition(){
 		
-		transform.position = new Vector3(transform.position.x,1,transform.position.z);
+		transform.position = new Vector3(transform.position.x,10000,transform.position.z);
 	}
 	
 	public void Stop(){

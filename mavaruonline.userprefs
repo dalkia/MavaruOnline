@@ -1,9 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Games/MiniGame.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Level Managers/GamesLobbyManager.cs">
     <Files>
-      <File FileName="Assets/Games/PlatformsGame/Scripts/CharacterScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Games/MiniGame.cs" Line="8" Column="27" />
+      <File FileName="Assets/Scripts/Level Managers/SumoGameClient.cs" Line="1" Column="1" />
+      <File FileName="Assets/Games/BallsGame/Scripts/BallManagerScript.cs" Line="106" Column="5" />
+      <File FileName="Assets/Scripts/Managers/SumoGameServer.cs" Line="51" Column="2" />
+      <File FileName="Assets/Scripts/Level Managers/GamesLobbyManager.cs" Line="17" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,22 +13,31 @@
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Games" expanded="True">
+                <Node name="BallsGame" expanded="True">
+                  <Node name="Scripts" expanded="True" />
+                </Node>
                 <Node name="PlatformsGame" expanded="True">
                   <Node name="Scripts" expanded="True" />
                 </Node>
                 <Node name="Scripts" expanded="True" />
-                <Node name="MiniGame.cs" selected="True" />
               </Node>
               <Node name="Network Files" expanded="True" />
               <Node name="Scripts" expanded="True">
                 <Node name="CharacterComponents" expanded="True" />
-                <Node name="Level Managers" expanded="True" />
+                <Node name="Level Managers" expanded="True">
+                  <Node name="GamesLobbyManager.cs" selected="True" />
+                </Node>
                 <Node name="Managers" expanded="True" />
                 <Node name="Plugins" expanded="True" />
                 <Node name="UI" expanded="True">
                   <Node name="Selectors" expanded="True" />
                 </Node>
               </Node>
+            </Node>
+          </Node>
+          <Node name="Assembly-CSharp-firstpass" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Plugins" expanded="True" />
             </Node>
           </Node>
           <Node name="Assembly-UnityScript" expanded="True">

@@ -59,58 +59,90 @@ public class NetworkManager : MonoBehaviour {
 	public void EnterGame(int gameType){
 		Debug.Log("entering Game");
 		networkView.RPC("ConnectToMinigame", RPCMode.Server, Network.player, gameType);
-	
 	}
+	
 	[RPC]//client
-	void OnGameAssigned(int gameId,Vector3 spawn){ // SE INSTANCIA MAIN CHARACTER?
+	void OnGameAssigned(int gameId,Vector3 spawn, int gameType){ // SE INSTANCIA MAIN CHARACTER?
+	
 		MainCharacter character = CharacterHolder.Instance.MainCharacter;
 		character.MinigameId = gameId;
-		Application.LoadLevel("PlatformsGame");
-		character.transform.position = spawn;
+		
+		if((MiniGameManager.GameType) gameType == MiniGameManager.GameType.PLATFORM){
+			Application.LoadLevel("PlatformsGame");
+			character.transform.position += spawn;
+		}
+		
+		/*string sceneName = "PlatformsGame";
+		MiniGameManager.GameType type = (MiniGameManager.GameType) gameType;
+		switch(type){
+			case MiniGameManager.GameType.PLATFORM: sceneName = "PlatformsGame"; break; 
+			case MiniGameManager.GameType.SUMO: sceneName = "ballMenu"; break; 
+		}
+		
+		Application.LoadLevel(sceneName);
+	
+		character.transform.position += spawn;*/
+		
+		networkView.RPC("CheckGameFull", RPCMode.Server, gameId);
+		
+		//StartCoroutine(WaitForLevelToLoad(gameId, spawn, character));
+	}
+	/*
+	IEnumerator WaitForLevelToLoad(int gameId, Vector3 spawn, MainCharacter character)
+	{
+		yield return new WaitForSeconds(5f);
+		Debug.Log (character.transform.position);
+		character.transform.position += spawn;
+		Debug.Log (Application.loadedLevel.ToString());
+		Debug.Log (GameObject.Find("Spawn").transform.position);
+		Debug.Log (character.transform.position);
 		networkView.RPC("CheckGameFull", RPCMode.Server, gameId);
 	
+		
+	}	
+	
+	
+	public void WaitForLevelToLoad(string sceneName){
+		while(!Application.loadedLevelName.Equals(sceneName)){
+			
+		}
 	}
-	
-	
+	*/
 	[RPC]//server
 	void ConnectToMinigame(NetworkPlayer player, int gameType){
 		Tuple<int,Vector3> gameInfo = minigameManager.ConnectToGame(users.GetUser(player).user.Username, gameType);
 		Debug.Log("gameid :"+ gameInfo.First()+ ",spawn "+ gameInfo.Second());
 		int gameId = gameInfo.First();
 		Vector3 spawn = gameInfo.Second();
-		
-		networkView.RPC("OnGameAssigned", player, gameId,spawn);
+		networkView.RPC("OnGameAssigned", player, gameId,spawn,gameType);
 	}
 	
 	[RPC]//server
 	void CheckGameFull(int gameId){
-	if(minigameManager.GetMiniGame(gameId).IsFull()){
-			List<string> usernames = minigameManager.GetMiniGame(gameId).GetPlayers();
-			Debug.Log(usernames.Count);
+		MiniGame g = minigameManager.GetMiniGame(gameId);
+		if(g.IsFull()){
+			List<string> usernames = g.GetPlayers();
+			Debug.Log("Minigame is full: " + usernames.Count);
 			foreach(string username in usernames){
-				Debug.Log("Starting: "+ username);
-				networkView.RPC("OnGameIsReady", users.GetUser(username).networkPlayer);
-				
+				Debug.Log("OnGameIsReady send to: "+ username);
+				networkView.RPC("OnGameIsReady", users.GetUser(username).networkPlayer, (int) g.gameType);
 			}
 	     }
 	}
 	
 	[RPC]//client
-	void OnGameIsReady(){
+	void OnGameIsReady(int gameType){
 		Debug.Log("GAME IS READY");
-		ManagerScript manager =GameObject.Find("GameManager").GetComponent<ManagerScript>();
-		CharacterHolder.Instance.MainCharacter.MovementManager.Enable(true);
-		manager.IsGameReady = true;
+		//ManagerScript manager = GameObject.Find("GameManager").GetComponent<ManagerScript>();
+		//manager.IsGameReady = true;
+		//CharacterHolder.Instance.MainCharacter.MovementManager.Enable(true);
 		
+		if((MiniGameManager.GameType) gameType == MiniGameManager.GameType.SUMO){
+			Application.LoadLevel("ballMenu");
+		}else{
+			GameObject.Find("GameManager").SendMessage("GameReady");
+		}
 	}
-	
-	
-
-	
-	
-	
-	
-	////////////////////////////////////////////////////////////////////
 	#endregion
 	
 	#region CLIENT

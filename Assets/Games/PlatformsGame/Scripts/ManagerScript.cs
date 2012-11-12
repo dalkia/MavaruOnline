@@ -44,7 +44,6 @@ public class ManagerScript : MonoBehaviour
 	public int charactersCounter;
 	private PlatformGameClient platformClient;
 	
-	
 	// Use this for initialization
 	void Start ()
 	{
@@ -53,10 +52,12 @@ public class ManagerScript : MonoBehaviour
 		character = CharacterHolder.Instance.MainCharacter;
 		character.transform.rotation = Quaternion.identity;
 		character.Show = true;
-		character.MovementManager.Enable(false);
+		character.MovementManager.Enable(true);
 		character.EnableCamera(false);
+		character.transform.position = GameObject.Find("Spawn").transform.position;
 		//character.cameras[character.CurrentCamera].enabled = false;
 		character.EnterPublicWorld(true);
+		character.rigidbody.useGravity = true;
 		
 		turn = 0;
 		round = 1;
@@ -85,8 +86,11 @@ public class ManagerScript : MonoBehaviour
 			coroutine1 = StartCoroutine (ChangeTexture ());					
 		}
 		
-		
-		
+	}
+	
+	public void GameReady(){
+		CharacterHolder.Instance.MainCharacter.MovementManager.Enable(true);
+		IsGameReady = true;
 	}
 	
 	void SetCharacters(){

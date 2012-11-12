@@ -11,8 +11,8 @@ public class InsideDoor : Selector {
 				if(GUILayout.Button("Return Home")) MavaruOnlineMain.GameStateManager.GoHome();
 			}
 			//if(GUILayout.Button("Go Outside")) MavaruOnlineMain.GameStateManager.GoOutside();
-			if(GUILayout.Button("Go To Common Place")) MavaruOnlineMain.GameStateManager.GoToCommonPlace();
-			//if(GUILayout.Button("Go To Common Place")) MavaruOnlineMain.GameStateManager.GoToGameLobby();
+			//if(GUILayout.Button("Go To Common Place")) MavaruOnlineMain.GameStateManager.GoToCommonPlace();
+			if(GUILayout.Button("Go To Common Place")) MavaruOnlineMain.GameStateManager.GoToGameLobby();
 			//if(GUILayout.Button("Go To Juani's Home")) MavaruOnlineMain.GameStateManager.GoToFriendsHome("Juani");
 			if(GUILayout.Button("...")) selectorEnable = false;
 			GUILayout.EndArea();

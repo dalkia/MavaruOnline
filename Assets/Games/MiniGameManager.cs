@@ -18,9 +18,7 @@ public class MiniGameManager {
 	
 	public static MiniGameManager Instance {
 		get{
-			Debug.Log("minigameman1");
 			if(instance == null) {
-				Debug.Log("minigameman2");
 				instance = new MiniGameManager();
 			}
 			return instance;
@@ -40,12 +38,18 @@ public class MiniGameManager {
 		if(currentMiniGame.IsFull())
 			currentMiniGame = CreateNewMiniGame((GameType)gameType);
 		
-		Vector3 spawnPlace =currentMiniGame.AddPlayerToGame(userName);
+		Vector3 spawnPlace = currentMiniGame.AddPlayerToGame(userName);
 		return new Tuple<int, Vector3>(currentMiniGame.gameId,spawnPlace);
 	}
 	
 	public MiniGame CreateNewMiniGame(GameType gameType){
-		MiniGame game = new MiniGame(gameType);
+		
+		MiniGame game = null;
+		switch(gameType){
+			case GameType.PLATFORM: game = new MiniGame(gameType); break;
+			case GameType.SUMO : game = new SumoMiniGame(gameType); break;
+		}
+		
 		minigames.Add(game.gameId, game);
 		currentMiniGames[(int)gameType] = game;
 		return game;

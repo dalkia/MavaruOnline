@@ -64,4 +64,6 @@ public class MainCharacter : Character {
 	public void EnterPublicWorld(bool enable){
 		networkManager.InPublicWorld = enable;
 	}
+	
+
 }
